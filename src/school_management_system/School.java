@@ -50,30 +50,52 @@ public class School {
 
     /**
      * *
-     * @return the list of the students of the school.
+     * @return the list of the students in the school.
      */
 
     public List<Student> getStudents() {
         return students;
     }
 
+    /**
+     * Adds a student to the school
+     * @param student the student to be added.
+     */
     public void addStudent(Student student) {
         students.add(student) ;
     }
 
+    /**
+     *
+     * @return the total money earned by the school.
+     */
     public int getTotalMoneyEarned() {
         return totalMoneyEarned;
     }
 
-    public void setTotalMoneyEarned(int totalMoneyEarned) {
-        this.totalMoneyEarned = totalMoneyEarned;
+    /**
+     * Adds the total money earned by the school.
+     * @param MoneyEarned moneuy
+     */
+
+    public void updateTotalMoneyEarned(int MoneyEarned) {
+        totalMoneyEarned += MoneyEarned;
     }
 
+    /**
+     *
+     * @return the total money spent by the school. .
+     */
     public int getTotalMoneySpent() {
         return totalMoneySpent;
     }
 
-    public void setTotalMoneySpent(int totalMoneySpent) {
-        this.totalMoneySpent = totalMoneySpent;
+    /**
+     * update the money that is spent by the school which
+     * is the salary given by the school by its teachers.
+     * @param MoneySpent
+     */
+    public void updateTotalMoneySpent(int MoneySpent) {
+        totalMoneySpent -=MoneySpent;
     }
 }
